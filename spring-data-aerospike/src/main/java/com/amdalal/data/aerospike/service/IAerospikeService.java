@@ -9,10 +9,10 @@ public interface IAerospikeService {
 
     void put(VOMarker vo) throws PutFailedException;
 
-    VOMarker get(String supc, Class<? extends VOMarker> clazz) throws GetFailedException;
+    VOMarker get(String key, Class<? extends VOMarker> clazz) throws GetFailedException;
 
     void loadAerospikeConfig(String endPoint, String packageToScan) throws LoadFailedException;
     
-    boolean remove(String supc, Class<? extends VOMarker> clazz) throws RemoveFailedException;
+    boolean remove(String key, Class<? extends VOMarker> clazz) throws RemoveFailedException;
 
 }
