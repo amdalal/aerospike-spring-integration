@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Aug 01 11:01:23 IST 2013
+http\://server.development.com\:8080/libs-release/.error=
+http\://server.development.com\:8080/libs-snapshot/.error=
+http\://server.development.com\:8080/libs-snapshot/.lastUpdated=1375335083807
+http\://server.development.com\:8080/libs-release/.lastUpdated=1375335083781

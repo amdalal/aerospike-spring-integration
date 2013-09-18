@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Aug 01 11:05:55 IST 2013
+aerospike-client-3.0.6-jar-with-dependencies.jar>=
+aerospike-client-3.0.6.pom>=
+aerospike-client-3.0.6.jar>=
