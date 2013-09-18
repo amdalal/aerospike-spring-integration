@@ -76,11 +76,11 @@ public class AerospikeServiceImpl implements IAerospikeService {
     }
 
     @Override
-    public VOMarker get(String supc, Class<? extends VOMarker> clazz) throws GetFailedException {
+    public VOMarker get(String key, Class<? extends VOMarker> clazz) throws GetFailedException {
         GenericVOWrapper voWrapper = markerToWrapperMap.get(clazz);
         Record record = null;
         try {
-            record = client.get(policy, new Key(voWrapper.getNamespace(), voWrapper.getSet(), supc));
+            record = client.get(policy, new Key(voWrapper.getNamespace(), voWrapper.getSet(), key));
         } catch (AerospikeException e2) {
             throw new GetFailedException("AerospikeException", e2);
         }
@@ -109,12 +109,12 @@ public class AerospikeServiceImpl implements IAerospikeService {
     }
 
     @Override
-    public boolean remove(String supc, Class<? extends VOMarker> clazz) throws RemoveFailedException {
+    public boolean remove(String key, Class<? extends VOMarker> clazz) throws RemoveFailedException {
         GenericVOWrapper voWrapper = markerToWrapperMap.get(clazz);
         try {
-            return client.delete(policy, new Key(voWrapper.getNamespace(), voWrapper.getSet(), supc));
+            return client.delete(policy, new Key(voWrapper.getNamespace(), voWrapper.getSet(), key));
         } catch (AerospikeException aex) {
-            throw new RemoveFailedException("Failed to remove SUPC: " + supc, aex);
+            throw new RemoveFailedException("Failed to remove key: " + key, aex);
         }
     }
 
