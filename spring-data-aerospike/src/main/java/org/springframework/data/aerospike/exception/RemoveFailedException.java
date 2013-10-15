@@ -1,6 +1,7 @@
-package com.amdalal.data.aerospike.exception;
+package org.springframework.data.aerospike.exception;
 
 public class RemoveFailedException extends Exception {
+
 
     /**
      * 

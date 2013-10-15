@@ -1,11 +1,12 @@
-package com.amdalal.data.aerospike.exception;
+package org.springframework.data.aerospike.exception;
 
 public class LoadFailedException extends Exception {
+
 
     /**
      * 
      */
-    private static final long serialVersionUID = 4474231508925302781L;
+    private static final long serialVersionUID = -7400433566190552317L;
 
     public LoadFailedException() {
         super();

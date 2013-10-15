@@ -1,10 +1,18 @@
-package com.amdalal.data.aerospike.core;
+package org.springframework.data.aerospike.core;
 
 import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.data.aerospike.annotation.Bin;
+
+
+/**
+ * Wrapper object for each object type which would be saved in Aerospike. This object will be populated when context loads.
+ * It caches the {@link Bin} names with their corresponding setter and getter {@link Method}s.
+ * 
+ */
 public class GenericVOWrapper implements Serializable {
 
     /**
@@ -65,5 +73,4 @@ public class GenericVOWrapper implements Serializable {
     public void setKeyBinName(String key) {
         this.keyBinName = key;
     }
-
 }

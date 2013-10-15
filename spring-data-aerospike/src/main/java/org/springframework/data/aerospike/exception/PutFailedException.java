@@ -1,11 +1,11 @@
-package com.amdalal.data.aerospike.exception;
+package org.springframework.data.aerospike.exception;
 
 public class PutFailedException extends Exception {
 
     /**
      * 
      */
-    private static final long serialVersionUID = 4474231508925302781L;
+    private static final long serialVersionUID = -4916813187168718316L;
 
     public PutFailedException() {
         super();

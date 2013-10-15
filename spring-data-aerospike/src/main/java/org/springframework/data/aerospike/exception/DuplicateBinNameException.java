@@ -1,5 +1,11 @@
-package com.amdalal.data.aerospike.exception;
+package org.springframework.data.aerospike.exception;
 
+import org.springframework.data.aerospike.annotation.Bin;
+
+/**
+ * Indicates same {@link Bin} name has been used multiple times in a object to be saved in Aerospike.
+ * 
+ */
 public class DuplicateBinNameException extends Exception {
 
     /**
